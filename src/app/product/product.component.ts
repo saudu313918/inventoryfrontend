@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.service.refreshlist();
   }
 
   onSubmit(form: NgForm){

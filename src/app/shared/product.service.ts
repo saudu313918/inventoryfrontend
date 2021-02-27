@@ -13,7 +13,7 @@ export class ProductService {
 
   list : Product[];
 
-  readonly baseURL= 'http://localhost:49222'
+  readonly baseURL= 'http://localhost:4200'
 
   postProduct() {
     return this.http.post(this.baseURL,this.formData);

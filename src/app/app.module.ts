@@ -8,11 +8,13 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
+import { ProductdetailsComponent } from './product/productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,

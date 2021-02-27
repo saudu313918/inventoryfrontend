@@ -1,0 +1,29 @@
+<div class="fluid-container">
+    <div class="card-body" >
+    
+        <table class="table table-bordered table-striped " style="background-color: #e3f2fd;">
+            <thead>
+                <th colspan="5" class=" text-center">Product Details</th>
+            </thead>
+            
+            <tr>
+                <td >Product Name</td>
+                <td >Product Brand</td>
+                <td >Product Rate</td>
+                <td >Product Quantity</td>
+                <td >Action</td>
+            </tr>
+
+            <tbody>
+                <tr *ngFor="let pd in list">
+                    <td>{{pd.product_name}}</td>
+                    <td>{{pd.product_brand}}</td>
+                    <td>{{pd.product_rate}}</td>
+                    <td>{{pd.product_quantity}}</td>
+                    <td><i class="far fa-trash-alt fa-lg text-danger"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
