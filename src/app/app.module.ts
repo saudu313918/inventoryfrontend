@@ -9,12 +9,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductdetailsComponent } from './product/productdetails/productdetails.component';
+import { SigninComponent } from './login/signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
