@@ -23,26 +23,28 @@
   
     <div class="row mt-5">
       <div class="card mx-auto">
-        <div class="card-header text-center bg-warning">Add Product</div>
+        <div class="card-header text-center bg-warning">Add Food</div>
         <div class="card-body">
           <form #form="ngForm" (submit)="onSubmit(form)"  novalidate>
             <input type="hidden" name="product_id" [value]="service.formData.product_id">
             <div class="form-group">
-              <label for="product_name">Product Name</label>
-              <input type="text" class="form-control form-control-lg" id="product_name"  name="product_name" placeholder="Product Name" #product_name="ngModel" [(ngModel)]="service.formData.product_name" required [class.invalid]="product_name.invalid && product_name.touched">
+              <label for="name">Food Name</label>
+
+              
+              <input type="text" class="form-control form-control-lg" id="name"  name="name" placeholder="Food Name" #name="ngModel" [(ngModel)]="service.formData.name" required [class.invalid]="name.invalid && name.touched">
             </div>
             <div class="form-group">
-              <label for="product_brand">Product Brand</label>
-              <input type="text" class="form-control form-control-lg" id="product_brand"  name="product_brand" placeholder="Product Brand" #product_name="ngModel" [(ngModel)]="service.formData.product_brand"  required>
+              <label for="description">Food Description</label>
+              <input type="text" class="form-control form-control-lg" id="description"  name="description" placeholder="Food Description" #description="ngModel" [(ngModel)]="service.formData.description"  required>
             </div>
             <div class="form-group">
-              <label for="product_rate">Product Rate</label>
-              <input type="text" class="form-control form-control-lg" id="product_rate"  name="product_rate" placeholder="Rate" #product_rate="ngModel" [(ngModel)]="service.formData.product_rate"  required>
+              <label for="price">Food Price</label>
+              <input type="text" class="form-control form-control-lg" id="price"  name="price" placeholder="Price" #price="ngModel" [(ngModel)]="service.formData.price"  required>
             </div>
 
             <div class="form-group">
-              <label for="product_quantity">Product Quantity</label>
-              <input type="text" class="form-control form-control-lg" id="product_quantity" name="product_quantity" placeholder="Quantity"  #product_quantity="ngModel" [(ngModel)]="service.formData.product_quantity"  required>
+              <label for="hotel">Hotel Name</label>
+              <input type="text" class="form-control form-control-lg" id="hotel" name="hotel" placeholder="Hotel Name"  #hotel="ngModel" [(ngModel)]="service.formData.hotel"  required>
             </div>
 
             <div class="form-group">
