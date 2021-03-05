@@ -6,10 +6,10 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Add Product</a>
+            <a class="nav-link" routerlink="login" routerlinkactive="active" href="/login" router-link-active="active">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerlink="/productdetails" routerlinkactive="active" href="/productdetails" router-link-active="active">Product Details</a>
+            <a class="nav-link" routerlink="productdetails" routerlinkactive="active" href="/productdetails/1" router-link-active="active">Product Details</a>
           </li>
         </ul>
         <span class="navbar-text">
@@ -18,32 +18,30 @@
       </div>
     </nav>
    
-    
+</div>  
   
-  
+<div class="fluid-container">
     <div class="row mt-5">
-      <div class="card mx-auto">
+      <div class="card mx-auto" style="width: 40%;">
         <div class="card-header text-center bg-warning">Add Food</div>
         <div class="card-body">
           <form #form="ngForm" (submit)="onSubmit(form)"  novalidate>
             <input type="hidden" name="product_id" [value]="service.formData.product_id">
             <div class="form-group">
-              <label for="name">Food Name</label>
-
-              
+              <label for="name"></label>
               <input type="text" class="form-control form-control-lg" id="name"  name="name" placeholder="Food Name" #name="ngModel" [(ngModel)]="service.formData.name" required [class.invalid]="name.invalid && name.touched">
             </div>
             <div class="form-group">
-              <label for="description">Food Description</label>
+              <label for="description"></label>
               <input type="text" class="form-control form-control-lg" id="description"  name="description" placeholder="Food Description" #description="ngModel" [(ngModel)]="service.formData.description"  required>
             </div>
             <div class="form-group">
-              <label for="price">Food Price</label>
+              <label for="price"></label>
               <input type="text" class="form-control form-control-lg" id="price"  name="price" placeholder="Price" #price="ngModel" [(ngModel)]="service.formData.price"  required>
             </div>
 
             <div class="form-group">
-              <label for="hotel">Hotel Name</label>
+              <label for="hotel"></label>
               <input type="text" class="form-control form-control-lg" id="hotel" name="hotel" placeholder="Hotel Name"  #hotel="ngModel" [(ngModel)]="service.formData.hotel"  required>
             </div>
 

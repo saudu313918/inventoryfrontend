@@ -21,6 +21,7 @@ export class ProductComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
+    
       this.service.postProduct().subscribe(
         res =>{
         this.resetForm(form);

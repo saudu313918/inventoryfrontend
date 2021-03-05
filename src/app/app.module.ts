@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductdetailsComponent } from './product/productdetails/productdetails.component';
 import { SigninComponent } from './login/signin/signin.component';
+import { appRoutes } from './routes';
+import { ProductService } from '../app/shared/product.service';
+import { SigninService } from "../app/shared/signin/login.service";
 
 @NgModule({
   declarations: [
@@ -20,14 +23,16 @@ import { SigninComponent } from './login/signin/signin.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
     
   ],
-  providers: [],
+  providers: [ProductService,
+    SigninService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}
